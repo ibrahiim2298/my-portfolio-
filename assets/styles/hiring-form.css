@@ -16,7 +16,7 @@ html{
 body {
     font-family: 'Roboto', Arial, sans-serif;
     /*background-image: linear-gradient(to right,#ffff,#004646);*/
-    background-color: #f7f7f7;
+    background-color: var(--secondary-color);
 }
 h1 {
     font-size: 2.2rem;
@@ -45,7 +45,7 @@ p {
     align-items: center;
 }
 .forms{
-    width: 70%;
+    width: 80%;
     padding-top: 2rem;
     padding-bottom: 6rem;
     border-radius: 1rem;
@@ -54,7 +54,12 @@ p {
 
 .forms h1{
     font-family: sans-serif;
-    margin-bottom: 2rem;
+    margin-bottom:0.5rem;
+    color: var(--hover-color);
+}
+.forms h2{
+    margin-bottom: 1.5rem;
+    font-weight: bold;
 }
 .forms span{
     color: var(--hover-color);
@@ -65,11 +70,18 @@ p {
 /*inputs and placeholders */
 .forms input,textarea{
     padding: .8rem 1.5rem;
-    margin-bottom: 2rem;
     width: 100%;
     border-radius: .5rem;
-    border: var(--cta) solid;
+    border: var(--font-color) solid 1px;
     font-size: 1.1rem;
+    outline: none;
+    background-color: transparent;
+}
+form input:focus{
+    border:var(--hover-color) solid 1px;
+}
+form textarea:focus{
+    border:var(--hover-color) solid 1px;
 }
 form input::placeholder{
     font-size: 1.2rem;
@@ -82,25 +94,37 @@ form textarea::placeholder{
     text-transform: capitalize;
     
 }
-
-
+textarea{
+    resize: none;
+}
+form *{
+    margin-bottom: 1rem;
+}
+form input,textarea{
+    margin-top: 0.5rem;
+}
 /*submit button */
 .form-container button{
-    width: 9rem;
+    width: 100%;
     height: 2.5rem;
     border-radius: .5rem;
     font-size: 1.1rem;
     text-transform: capitalize;
     background-color: var(--cta);
     color: var(--primary-color);
+    border: none;
 }
 .form-container button:hover{
     background-color: var(--hover-color);
     transition: .3s;
     color: black;
+    border: none;
 }
 
-
+form label{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
 
 /*form styles ends in here */
 

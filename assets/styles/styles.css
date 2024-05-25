@@ -144,7 +144,7 @@ nav{
     margin-top: 1rem;
 }
 .social-media-links a:hover {
-    background-color: var(--hover-color);
+    background-color: var(--cta);
     color: var(--primary-color);
     transition: .3s;
     transform: rotate(-30deg);
@@ -171,7 +171,7 @@ nav{
 }
 .header-content-left .download-cv-button {
     color: black;
-    border: var(--cta) solid;
+    border: var(--cta) solid 1px;
 }
 .header-content-left .download-cv-button:hover {
     background-color: var(--cta);
@@ -313,6 +313,10 @@ nav{
 .about-image img:hover {
     border-radius: 0;
 }
+.title-about{
+    color: var(--hover-color);
+    text-transform: capitalize;
+}
 /* about sectin styles ends in here */
 
 
@@ -324,15 +328,11 @@ nav{
     padding-top: 3rem;
     padding-bottom: 3rem;
 }
-
 .section-title h1 {
-    color: var(--cta);
-    text-transform: capitalize;
-    border-bottom: var(--cta) solid;
-}
-.section-title span {
-    color: var(--hover-color);
-    text-transform: capitalize;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 5rem;
 }
 /* and it ends in here */
 
@@ -353,19 +353,17 @@ nav{
     padding-bottom: 4rem;
 }
 .service {
-    background-color: var(--cta);
+    background-color: var(--secondary-color);
     width: 310px;
     height: 20rem;
     line-height: 1.5;
-    text-align: center;
     padding: 1rem;
-    box-shadow: var(--cta) 10px 10px 30px;
 }
 .service .service-type{
-    color: var(--primary-color);
+    color: var(--font-color);
 }
 .service .service-description{
-    color: var(--secondary-color);
+    color: var(--font-color);
     
 }
 .service:hover {
@@ -411,6 +409,7 @@ nav{
     text-transform: capitalize;
     background-color: var(--cta);
     color: var(--primary-color);
+    border: none;
 }
 
 .input-one {
@@ -419,14 +418,22 @@ nav{
 
 .contact-wrapper input,
 textarea {
-    border: var(--cta) solid;
+    border: var(--cta) solid 1px;
+    outline: none;
+    background-color: transparent;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
-
+.contact-wrapper label{
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+.contact-wrapper form *:focus{
+    border: var(--hover-color) solid 1px ;
+}
 .contact-wrapper textarea {
     border-radius: .5rem;
     width: 100%;
-    margin-top: .6rem;
-    margin-bottom: .6rem;
     padding: 1rem;
     color: black;
 }
@@ -438,13 +445,9 @@ textarea {
     padding:1rem;
 
 }
-
-input textarea,
-::placeholder {
-    text-transform: capitalize;
-    color: var(--hover-color);
+textarea{
+    resize: none ;
 }
-
 .contact-section-1 .contact-info {
     display: flex;
     margin-bottom: 1.3rem;
@@ -486,11 +489,6 @@ input textarea,
     color: var(--hover-color);
     text-transform: capitalize;
 }
-
-.contact-section-2 .input-item-1 {
-    margin-bottom: .6rem;
-}
-
 .contact-icon:hover i {
     color: var(--primary-color);
     transition: .3s;
@@ -660,9 +658,6 @@ input textarea,
 
 
 @media screen and (max-width:555px) {
-    .cta-buttons {
-        flex-direction: column;
-    }
     .resume-content .skill {
         flex-direction: column;
         align-items: flex-start;
@@ -670,7 +665,9 @@ input textarea,
     .container-level {
         width: 100%;
     }
-
+    .service{
+        width: 100%;
+    }
     .skill-containers .skill {
         align-items: flex-start;
     }

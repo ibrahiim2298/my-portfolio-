@@ -11,24 +11,30 @@
 <body>
     <div class="form-container">
         <div class="forms">
-             <h1>
-                Complete the Project Inquiry Form and Allow
-                 Me to Bring Your Website Ideas to Life! <span>What Is Your Project?</span></h1> 
-             </h1>
+            <h1>What Is Your Project?</h1>
+            <h2>Complete the Project Inquiry Form and Allow
+                 Me to Bring Your Website Ideas to Life!
+             </h2>
             <form action="https://formspree.io/f/mqkvvgwv" method="post" target="_blank">
-                <input type="text" name="name" placeholder="enter your name" required><br>
-                <input type="email" name="email" placeholder="enter your email" required><br>
-                <input list="project-list" name="project type" id="project type" placeholder="Select Project Type " required>
+                <label for="name">enter your name</label>
+                <input type="text" name="name" required>
+                <label for="email">enter your email</label>
+                <input type="email" name="email" required>
+                <label for="project">enter project type</label>
+                <input list="project-list" name="project type" id="project type" placeholder="Select" required>
                 <datalist id="project-list">
                     <option value="web developement">
                     <option value="web design">
                     <option value="UI/UX">
                     <option value="project collaboration">
                 </datalist><br>
-                <input type="text" name="expected period" placeholder="Expected Completion Time" required><br>
-                <input type="text" name="badget" placeholder="enter your badget" required><br>
-                <textarea name="project details" id="" cols="30" rows="10" placeholder="Please describe your project in as much detail as possible. Include your goals, specific requirements, features, target audience, and any other relevant information."></textarea><br>
-                <button>submit</button>
+                <label for="timing">enter Expected Completion Time</label>
+                <input type="text" name="expected period" required>
+                <label for="badget">enter your badget</label>
+                <input type="text" name="badget" required>
+                <label for="describtion">Please describe your project in as much detail as possible. Include your goals, specific requirements, features, target audience, and any other relevant information.</label>
+                <textarea name="project details" id="" cols="30" rows="10"></textarea>
+                <button>send your request to me</button>
             </form>
         </div>
     </div>
