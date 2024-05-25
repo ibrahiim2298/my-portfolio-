@@ -45,6 +45,7 @@ nav{
     position: sticky;
     top: 0;
     bottom: 0;
+    z-index: 1000;
 }
 .navbar {
     max-width: 1024px;
@@ -359,7 +360,6 @@ nav{
     text-align: center;
     padding: 1rem;
     box-shadow: var(--cta) 10px 10px 30px;
-    border: var(--hover-color) solid;
 }
 .service .service-type{
     color: var(--primary-color);
